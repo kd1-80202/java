@@ -1,0 +1,89 @@
+import java.util.Scanner;
+
+public class calculator {
+	
+int AccNo;
+int balance;
+int items;
+int credits;
+int allowed_creditlimit;
+
+public calculator() {
+	super();
+	
+}
+
+public calculator(int accNo, int balance, int items, int credits, int allowed_creditlimit) {
+	super();
+	AccNo = accNo;
+	this.balance = balance;
+	this.items = items;
+	this.credits = credits;
+	this.allowed_creditlimit = allowed_creditlimit;
+}
+
+
+public int getAccNo() {
+	return AccNo;
+}
+
+public void setAccNo(int accNo) {
+	AccNo = accNo;
+}
+
+public int getBalance() {
+	return balance;
+}
+
+public void setBalance(int balance) {
+	this.balance = balance;
+}
+
+public int getItems() {
+	return items;
+}
+
+public void setItems(int items) {
+	this.items = items;
+}
+
+public int getCredits() {
+	return credits;
+}
+
+public void setCredits(int credits) {
+	this.credits = credits;
+}
+
+public int getAllowed_creditlimit() {
+	return allowed_creditlimit;
+}
+
+public void setAllowed_creditlimit(int allowed_creditlimit) {
+	this.allowed_creditlimit = allowed_creditlimit;
+}
+
+void acceptCalculator()
+{
+	Scanner sc=new Scanner(System.in);
+	System.out.println("Enter account Number= ");
+	AccNo=sc.nextInt();
+	System.out.println("Enter balance at beginng of month= ");
+	balance=sc.nextInt();
+	System.out.println("Enter total of all items charged by the customer this month= ");
+	items=sc.nextInt();
+	System.out.println("Enter total of all credits applied to the customer’s account this month= ");
+	credits=sc.nextInt();
+	System.out.println("Enter allowed credit limit= ");
+	allowed_creditlimit=sc.nextInt();
+}
+ void displayCalculator()
+ {
+	 System.out.println("AccountNo= "+AccNo);
+	 System.out.println("Balance at begining of month= "+balance);
+	 System.out.println("Items charged by customer this month= "+items);
+	 System.out.println("Credits applied this month= "+credits);
+	 System.out.println("Allowed credits limits= "+allowed_creditlimit);
+ }
+
+}

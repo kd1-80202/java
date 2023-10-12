@@ -1,0 +1,5 @@
+package coo.app.geometry;
+
+public class Point2D {
+
+}
