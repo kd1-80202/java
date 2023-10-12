@@ -1,0 +1,16 @@
+package Employee;
+
+public class Employee {
+	String Fname;
+	String Lname;
+	double salary;
+	
+
+	
+
+	public static void main(String[] args) {
+	
+
+	}
+
+}

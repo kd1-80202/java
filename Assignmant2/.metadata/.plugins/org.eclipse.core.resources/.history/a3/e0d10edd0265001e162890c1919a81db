@@ -1,0 +1,82 @@
+import java.util.Scanner;
+
+public class invoice {
+  private String  Partno;
+  private String partdescription;
+  private int itemqyt;
+  private double price;
+}
+
+invoice()
+{
+	
+}
+
+invoice(String  Partno,String partdescription,int itemqyt,double price)
+{
+	this.Partno=Partno;
+	this.partdescription=partdescription;
+	this.itemqyt=itemqyt;
+	this.price=price;
+	
+}
+
+public String getPartno() {
+	return Partno;
+}
+
+public void setPartno(String partno) {
+	Partno = partno;
+}
+
+public String getPartdescription() {
+	return partdescription;
+}
+
+public void setPartdescription(String partdescription) {
+	this.partdescription = partdescription;
+}
+
+public int getItemqyt() {
+	return itemqyt;
+}
+
+public void setItemqyt(int itemqyt) {
+	this.itemqyt = itemqyt;
+}
+
+public double getPrice() {
+	return price;
+}
+
+public void setPrice(double price) {
+	this.price = price;
+}
+public void acceptinvoice()
+{
+	Scanner sc=new Scanner(System.in);
+	System.out.println("Enter Partno= ");
+	this.Partno=sc.nextLine();
+	System.out.println("Enter partdescription= ");
+	this.partdescription=sc.nextLine();
+	System.out.println("Enter itemqyt= ");
+	this.itemqyt=sc.nextInt();
+	System.out.println("Enter price= ");
+	this.price=sc.nextDouble();
+			
+}
+
+public void displayinvoice()
+{
+	System.out.println("partrno="+Partno+","+"partdescription="+partdescription+","+"itemqyt="+itemqyt+","+"price= "+price);
+}
+
+public static void main(String[]args)
+{
+	
+}
+
+
+  
+  
+  

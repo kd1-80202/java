@@ -1,0 +1,10 @@
+package Tester;
+
+public class Point2Dtest {
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+
+	}
+
+}

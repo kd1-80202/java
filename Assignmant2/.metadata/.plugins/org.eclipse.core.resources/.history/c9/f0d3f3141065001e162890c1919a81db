@@ -1,0 +1,63 @@
+package Employee;
+
+import java.util.Scanner;
+
+public class Employee {
+	String Fname;
+	String Lname;
+	double salary;
+	
+
+	
+
+	public Employee() {
+		super();
+		
+	}
+	public Employee(String fname, String lname, double salary) {
+		super();
+		Fname = fname;
+		Lname = lname;
+		this.salary = salary;
+	}
+	
+	public String getFname() {
+		return Fname;
+	}
+	public void setFname(String fname) {
+		Fname = fname;
+	}
+	public String getLname() {
+		return Lname;
+	}
+	public void setLname(String lname) {
+		Lname = lname;
+	}
+	public double getSalary() {
+		return salary;
+	}
+	public void setSalary(double salary) {
+		this.salary = salary;
+	}
+	void acceptEmployee()
+	{
+		Scanner sc=new Scanner(System.in);
+	    System.out.println("Enter First name= ");
+	    this.Fname=sc.nextLine();
+	    System.out.println("Enter last name= ");
+	    this.Lname=sc.nextLine();
+	    System.out.println("Enter Salary= ");
+	    this.salary=sc.nextDouble();
+	
+	}
+	void displayEmployee()
+
+	{
+		System.out.println("First name="+Fname+","+"Last name="+Lname+","+"Salary="+salary);
+	}
+	public static void main(String[] args) {
+	
+
+	}
+
+}

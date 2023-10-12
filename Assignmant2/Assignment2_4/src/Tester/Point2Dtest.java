@@ -1,0 +1,28 @@
+package Tester;
+
+import com.app.geometry.Point2D;
+
+public class Point2Dtest {
+
+	public static void main(String[] args) 
+	{
+		Point2D p1=new Point2D();
+		System.out.println("First Point");
+		p1.accept();
+		Point2D p2=new Point2D();
+		System.out.println("Second Point");
+		p2.accept();
+
+   if(p1.isEqual(p2))
+   {
+	   System.out.println("First point = ");
+	   p1.display();
+	   System.out.println("Second point = ");
+	   p2.display();
+   }
+   else
+   {
+	   System.out.println("Distance between two points is : "+p1.calculateDistance(p2));
+   }
+}
+}
