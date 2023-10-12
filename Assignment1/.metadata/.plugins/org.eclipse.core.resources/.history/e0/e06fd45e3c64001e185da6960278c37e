@@ -1,0 +1,13 @@
+import java.util.Scanner;
+
+public class Assignment1_1 {
+  public static void main(String [] args)
+  {
+	  int num1 ;
+  	  Scanner sc=new Scanner(System.in);
+  	  System.out.println("Enter number= ");
+  	  num1=sc.nextInt();
+  	  System.out.println();
+  }
+  
+}

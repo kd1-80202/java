@@ -1,0 +1,29 @@
+import java.util.Scanner;
+
+public class Que4_1 {
+   public static void main(String[]args) {
+	   
+	   double num1,num2;
+	  
+	   
+	   Scanner sc=new Scanner(System.in);
+	   System.out.println("Enter the value of num1= ");
+	  
+	   if(sc.hasNextDouble()!=sc.hasNextDouble())
+	   {
+		   System.out.println("Wrong input!!!");
+		   System.exit(0);
+	   }
+	   num1=sc.nextDouble();
+	   System.out.println("Enter the value num2= ");
+	  
+	   if( sc.hasNextDouble()!=sc.hasNextDouble())
+	   {
+		   System.out.println("Wrong input!!!");
+		   System.exit(0);
+	   }
+	 num2=sc.nextDouble();
+	 System.out.println("Average is"+(num1+num2)/2);
+   }
+}
+

@@ -1,0 +1,75 @@
+import java.util.Scanner;
+
+public class Assignment1_3 {
+	
+	public static void main(String[] args)
+	{  int choice,price,Qty;
+		Scanner sc=new Scanner(System.in);
+		System.out.println("0.Exit");
+		System.out.println("1.Dosa     Rs.40");
+		System.out.println("2.Samosa   Rs.20");
+		System.out.println("3.Idli     Rs.20");
+		System.out.println("4.Patis    Rs.10");
+		System.out.println("5.Misal    Rs.40");
+		System.out.println("6.vadapav   Rs.15");
+		System.out.println("7.Upama   Rs.20");
+		System.out.println("8.Meduvada  Rs.30");
+		System.out.println("9.Kachori  Rs.40");
+		System.out.println("Enter the choice =");
+		choice= sc.nextInt();
+		int Dosa_count=0;
+		int Samosa_count=0;
+		int Idli_count=0;
+		int Patis_count=0;
+		int Misal_count=0;
+		int Vadapav_count=0;
+		int Upama_count=0;
+		int Meduvada_count=0;
+		int Kachori_count=0;
+		
+		
+		switch (choice) {
+		case 1:
+			
+			break;
+        case 1:
+			
+			break;
+        case 1:
+			
+			break;
+        case 1:
+			
+			break;
+        case 1:
+	
+	        break;
+        case 1:
+	
+	        break;
+        case 1:
+	
+            break;
+         case 1:
+	
+	        break;
+         case 1:
+	
+	        break;
+
+	
+
+		default:
+			break;
+		}
+		
+		
+		
+		
+			
+			
+			
+		}
+		
+	}
+}

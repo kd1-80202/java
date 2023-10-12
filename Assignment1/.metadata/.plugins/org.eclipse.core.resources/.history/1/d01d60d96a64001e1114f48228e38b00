@@ -1,0 +1,108 @@
+import java.util.Scanner;
+
+public class Assignment1_3 {
+
+	public static void main(String[] args) {
+		int choice, price, Qty, Total_bill;
+		int Dosa_bill = 0;
+		int Samosa_bill = 0;
+		int Idli_bill = 0;
+		int Patis_bill = 0;
+		int Misal_bill = 0;
+		int Vadapav_bill = 0;
+		int Upama_bill = 0;
+		int Meduvada_bill = 0;
+		int Kachori_bill = 0;
+		int Generate_bill = 0;
+		Scanner sc = new Scanner(System.in);
+		while (choice!=11)
+	   {
+		System.out.println("0.Exit");
+		System.out.println("1.Dosa     Rs.40");
+		System.out.println("2.Samosa   Rs.20");
+		System.out.println("3.Idli     Rs.20");
+		System.out.println("4.Patis    Rs.10");
+		System.out.println("5.Misal    Rs.40");
+		System.out.println("6.vadapav   Rs.15");
+		System.out.println("7.Upama   Rs.20");
+		System.out.println("8.Meduvada  Rs.30");
+		System.out.println("9.Kachori  Rs.40");
+		System.out.println("Enter the choice =");
+		choice = sc.nextInt();
+		
+
+		switch (choice) {
+		case 1:
+			System.out.println("Enter the Qty = ");
+			Qty = sc.nextInt();
+			Dosa_bill += Qty * 40;
+			System.out.println("Total Dosa bill= " + Dosa_bill);
+			break;
+		case 2:
+			System.out.println("Enter the Qty = ");
+			Qty = sc.nextInt();
+			Samosa_bill += Qty * 40;
+			System.out.println("Total Samosa bill= " + Samosa_bill);
+			break;
+
+		case 3:
+			System.out.println("Enter the Qty = ");
+			Qty = sc.nextInt();
+			Idli_bill += Qty * 40;
+			System.out.println("Total Idli bill= " + Idli_bill);
+			break;
+		case 4:
+			System.out.println("Enter the Qty = ");
+			Qty = sc.nextInt();
+			Patis_bill += Qty * 40;
+			System.out.println("Total Patis bill= " + Patis_bill);
+			break;
+		case 5:
+			System.out.println("Enter the Qty = ");
+			Qty = sc.nextInt();
+			Misal_bill += Qty * 40;
+			System.out.println("TotalMisal bill= " + Misal_bill);
+			break;
+		case 6:
+			System.out.println("Enter the Qty = ");
+			Qty = sc.nextInt();
+			Vadapav_bill += Qty * 40;
+			System.out.println("Total Vadapav bill= " + Vadapav_bill);
+			break;
+		case 7:
+			System.out.println("Enter the Qty = ");
+			Qty = sc.nextInt();
+			Upama_bill += Qty * 40;
+			System.out.println("Total Upama bill= " + Upama_bill);
+			break;
+		case 8:
+			System.out.println("Enter the Qty = ");
+			Qty = sc.nextInt();
+			Meduvada_bill += Qty * 40;
+			System.out.println("Total Meduvada bill= " + Meduvada_bill);
+			break;
+		case 9:
+			System.out.println("Enter the Qty = ");
+			Qty = sc.nextInt();
+			Kachori_bill += Qty * 40;
+			System.out.println("Total Kachori bill= " + Kachori_bill);
+			break;
+
+		case 10:
+
+			Generate_bill = Dosa_bill + Samosa_bill + Idli_bill + Patis_bill + Misal_bill + Vadapav_bill + Upama_bill
+					+ Meduvada_bill + Kachori_bill;
+			System.out.println("Generate bill = " + Generate_bill);
+
+			break;
+
+		default:
+			System.out.println("You entered wrong choice....");
+			break;
+		}
+
+		System.out.println("Thank you for visiting!!!");
+
+	}
+}
+}
