@@ -60,8 +60,10 @@ public class main {
 				break;
 	
 	case 3://get all user
+		
+
 		try (UsersDao dao=new UsersDao()){
-			List<Users>list=dao.findAll();
+			List<Users> list=dao.displayAll();
 			list.forEach(e -> System.out.println(e));
 		}catch (Exception e) {
 			e.printStackTrace();
@@ -69,36 +71,33 @@ public class main {
 		
 		break;
 	
-	case 4:
-		try(UsersDao dao=new UsersDao()){
-			System.out.println("Enter user id you want to update=");
-			int id=sc.nextInt();
-			System.out.println("Enter first name=");
-			String firstName=sc.next();
-			System.out.println("Enter last name=");
-			String lastName=sc.next();
-			System.out.println("Enter email=");
-			String email=sc.next();
-			System.out.println("Enter password=");
-			String password=sc.next();
-			System.out.println("Enter dob=");
-			String date=sc.next();
-			SimpleDateFormat sdf=new SimpleDateFormat("dd-MM-yyyy");
-			Date dob=sdf.parse(date);
-			System.out.println("Enter status=");
-			boolean Status=sc.nextBoolean();
-			System.out.println("Enter role=");
-			String role=sc.next();
-			int cnt=dao.updateUser(a);
-		System.out.println("users updated"+cnt);
-	}catch (Exception e) {
-		e.printStackTrace();
+	case 4://update user
+		try (UsersDao dao = new UsersDao()) {
+
+			System.out.println("Enter Id to be updated");
+			int id = sc.nextInt();
+			System.out.println("Enter First name");
+			String firstname = sc.next();
+			System.out.println("Enter last name");
+			String lastname = sc.next();
+			System.out.println("Enter Password");
+			String password = sc.next();
+			 a.setFirstName(firstname);
+			    a.setLastName(lastname);
+			    a.setPassword(password);
+			a.setId(id);
+			int cnt = dao.updateUser(a);
+			System.out.println("User Updated :" + cnt);
+		} catch (Exception e) {
+			e.printStackTrace();
+		}
 	}
-			
-		
 		break;
+		
+		
+		
 	
-		}	
+	
 		
 	}while(choice!=0);
 	}

@@ -1,6 +1,6 @@
 package com.sunbeam;
 
-import java.sql.Connection;
+import java.sql.*;
 import java.sql.Date;
 import java.sql.PreparedStatement;
 import java.sql.ResultSet;
@@ -52,44 +52,43 @@ public class UsersDao implements AutoCloseable {
 	}
 	
 	//get all users
-	public List<Users> findAll() throws SQLException{
-		List<Users>list=new ArrayList<>();
-		String sql="SELECT * FROM users";
-		try(PreparedStatement stmt=con.prepareStatement(sql)){
-		try(ResultSet rs=stmt.executeQuery()){
-			while(rs.next()) {
-				int id=rs.getInt("id");
-				String firstName=rs.getString("first_Name");
-				String lastName=rs.getString("last_Name");
-				String email=rs.getString("email");
-				String password=rs.getString("password");
-				java.sql.Date sdate=rs.getDate("dob");
-			   Date bdate=new Date(sdate.getTime());
-			   boolean status=rs.getBoolean("status");
-			   String role=rs.getString("role");
-		Users a=new Users(id,firstName,lastName,email,password,sdate,status,role);
-		list.add(a);
-		return list;
+	public List<Users> displayAll() throws SQLException {
+		List<Users> list = new ArrayList<>();
+		String sql = "SELECT * FROM users";
+		try (PreparedStatement stmt = con.prepareStatement(sql)) {
+			try (ResultSet rs = stmt.executeQuery()) {
+				while (rs.next()) {
+					int id = rs.getInt("id");
+					String fname = rs.getString("first_name");
+					String lname = rs.getString("last_name");
+					String email = rs.getString("email");
+					String passwd = rs.getString("password");
+					boolean status = rs.getBoolean("status");
+					String role = rs.getString("role");
+					java.sql.Date sDate = rs.getDate("dob");
+					java.util.Date uDate = new Date(sDate.getTime());
+					Users a = new Users(id, fname, lname, email, passwd, uDate, status, role);
+					list.add(a);
+
+				}
+				return list;
 			}
 		}
-		}
-	
-		// Update user by id
-	  public  int updateUser(Users a) throws SQLException {
-	        String sql = "UPDATE users SET first_name=?, last_name=?, email=?, password=?, dob=?, status=?, role=? WHERE id=?";
-	        try (PreparedStatement stmt = con.prepareStatement(sql)) {
-	            stmt.setString(1, user.getFirstName());
-	            stmt.setString(2, user.getLastName());
-	            stmt.setString(3, user.getEmail());
-	            stmt.setString(4, user.getPassword());
-	            java.sql.Date sdate=new java.sql.Date(a.getDob().getTime());
-	            stmt.setDate(5, dob);
-	            stmt.setBoolean(6, user.getStatus());
-	            stmt.setString(7, user.getRole());
-	            stmt.setInt(8, user.getId());
-	            int cnt = stmt.executeUpdate();
-	            return cnt;
-	        }
-	    }
 	}
-}
+	
+	// Update user by id
+	public int updateUser(Users a) throws SQLException {
+		String sql = "UPDATE users set first_name=? ,last_name=?, password=? where id=?";
+		try (PreparedStatement stmt = con.prepareStatement(sql)) {
+			stmt.setString(1, a.getFirstName());
+			stmt.setString(2, a.getLastName());
+			stmt.setString(3, a.getPassword());
+			stmt.setInt(4, a.getId());
+			int cnt = stmt.executeUpdate();
+			return cnt;
+		}
+	}
+
+	
+	}
+
